@@ -1,0 +1,3 @@
+Este repositorio sera usado para guardar las practicas que vaya realizando en el curso de MIT sobre introduccion a python
+El curso acaba el 26 de marzo y lo estoy empezando el dia 3 de febrero.
+Se recomendaba usar anaconda y spyder para este curso pero asumire que no habria una diferrencia real entre IDEs.
