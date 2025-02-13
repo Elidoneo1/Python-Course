@@ -1,7 +1,5 @@
-# Problem Set 2
-
 #1
-balance = 484
+balance = 3329
 annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
 
@@ -10,7 +8,6 @@ def RemainingBalance(balance,annualInterestRate,monthlyPaymentRate,i=1):
     MinimumMonthlyPayment = monthlyPaymentRate * balance
     MonthlyUnpaidBalance = balance - MinimumMonthlyPayment
     NewBalance = round(MonthlyUnpaidBalance + MonthlyInterestRate * MonthlyUnpaidBalance,2)
-    #print("Month ",i," Remaining balance: ",NewBalance)
     i += 1
     if i == 13:
         print("Remaining balance: ",NewBalance)
@@ -25,19 +22,17 @@ print(" ")
 
 
 #2
-balance = 320000
+balance = 4773
 annualInterestRate = 0.2
 
 def FixMonthlyPayment(balance,annualInterestRate,epsilon = 0.01):
     MonthlyInterestRate = annualInterestRate / 12
-    low = balance / 12 #When annualInterestRate == 0, the balance is the fixed monthly payment
-    high = (balance * (1 + annualInterestRate) ** 2)/ 12 #Maximum value without lowering the balance
+    low = balance / 12 
+    high = (balance * (1 + annualInterestRate) ** 2)/ 12
     
     while high - low >= epsilon:
         monthlyPayment = (high + low) / 2
         TempBalance = balance
-        #print("low: ",low,"high: ",high)
-        #print("Calculating with monthlypayment of: ",monthlyPayment)
         for i in range(12):
             TempBalance = (TempBalance - monthlyPayment) * (1 + MonthlyInterestRate)
         
@@ -45,7 +40,6 @@ def FixMonthlyPayment(balance,annualInterestRate,epsilon = 0.01):
             low = monthlyPayment
         else:
             high = monthlyPayment
-        #print("Balance: ",TempBalance)
     monthlyPayment = (monthlyPayment + 10) // 10 * 10
     print("Lowest Payment: ",monthlyPayment)
 
@@ -55,19 +49,17 @@ print(" ")
 
 
 #3
-balance = 999999
-annualInterestRate = 0.18
+balance = 3926
+annualInterestRate = 0.2
 
 def FixMonthlyPayment(balance,annualInterestRate,epsilon = 0.01):
     MonthlyInterestRate = annualInterestRate / 12
-    low = balance / 12 #When annualInterestRate == 0, the balance is the fixed monthly payment
-    high = (balance * (1 + annualInterestRate) ** 2)/ 12 #Maximum value without lowering the balance
+    low = balance / 12
+    high = (balance * (1 + annualInterestRate) ** 2)/ 12 
     
     while high - low >= epsilon:
         monthlyPayment = (high + low) / 2
         TempBalance = balance
-        #print("low: ",low,"high: ",high)
-        #print("Calculating with monthlypayment of: ",monthlyPayment)
         for i in range(12):
             TempBalance = (TempBalance - monthlyPayment) * (1 + MonthlyInterestRate)
         
@@ -75,7 +67,6 @@ def FixMonthlyPayment(balance,annualInterestRate,epsilon = 0.01):
             low = monthlyPayment
         else:
             high = monthlyPayment
-        #print("Balance: ",TempBalance)
         monthlyPayment= round(monthlyPayment,2)
     print("Lowest Payment: ",monthlyPayment)
 

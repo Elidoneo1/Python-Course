@@ -16,3 +16,18 @@ F:\MITx Transcripts Texts\Variables
 
 Video-OperatorsAndBranching-Transcript:
 F:\MITx Transcripts Texts\OperatorsAndBranching
+
+Video-Bindings-Transcript:
+F:\MITx Transcripts Texts\Bindings
+
+Video-Strings-Transcript:
+F:\MITx Transcripts Texts\Strings
+
+Video-InputOutput-Transcript:
+F:\MITx Transcripts Texts\InputOutput
+
+Video-IDE-Transcript:
+F:\MITx Transcripts Texts\IDE
+
+Video-ControlFlow-Transcript:
+F:\MITx Transcripts Texts\ControlFlow
